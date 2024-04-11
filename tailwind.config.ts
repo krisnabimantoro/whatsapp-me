@@ -22,6 +22,7 @@ const config: Config = {
         'gray2':'#A5A5A5',
         'third':'#008C9F'
       },
+      
 
       animation: {
         blob: "blob 2s infinite"
