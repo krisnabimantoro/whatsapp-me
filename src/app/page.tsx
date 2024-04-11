@@ -45,9 +45,16 @@ export default function Home() {
               &rarr;
             </button>
           </form>
-          <p className=" text-center text-[10px] md:text-xs lg:text-xs pt-4 text-gray2">
+          <p className=" text-center text-[10px] md:text-xs lg:text-xs pt-3 text-gray2">
             *Your data is safe, this website not save your phone number
           </p>
+          <div className="flex justify-center text-center text-[9px] md:text-xs lg:text-[12px] pt-5 text-gray-300">
+            <p>created by . </p>
+          <a href="https://www.instagram.com/krisnabmntr__/" className="hover:underline">
+            Krisna Bimantoro
+          </a>
+          </div>
+          
         </div>
       </div>
     </div>
