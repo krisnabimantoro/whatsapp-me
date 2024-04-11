@@ -1,3 +1,5 @@
+import { transform } from "next/dist/build/swc";
+import { blob } from "stream/consumers";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -15,8 +17,31 @@ const config: Config = {
       },
       colors: {
         'Secondary':'#4EDC83',
-        'grey':'#E6EDED'
+        'grey':'#E6EDED',
+        'buttonColour':'#2A2F37',
+        'gray2':'#A5A5A5',
+        'third':'#008C9F'
       },
+
+      animation: {
+        blob: "blob 2s infinite"
+      },
+      keyframes:{
+        blob:{
+          "0":{
+            transform : "scale(1)"
+          },
+          "33":{
+            transform : "scale(1.2)"
+          },         
+          "66":{
+            transform : "scale(0.8)"
+          },         
+          "100":{
+            transform : "scale(1)"
+          }
+        }
+      }
     },
    
   },
