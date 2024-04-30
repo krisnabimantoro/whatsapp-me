@@ -5,10 +5,11 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [inputVal, setInputVal] = useState("");
-  const { push } = useRouter();
+  const router = useRouter();
+  // const { push } = useRouter();
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
-    push(`http://wa.me/62${inputVal}`);
+    router.push(`http://wa.me/62${inputVal}`);
   };
 
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <div className="flex flex-wrap h-screen w-screen">
         <div className="absolute bottom-0 -left-20 w-36 h-48 md:w-72 md:h-72 lg:w-72 lg:h-72 bg-Secondary rounded-full blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
 
-        <div className="absolute top-0 lg:right-0 w-24 h-24 md:w-80 md:h-80 lg:w-80 lg:h-80 right-10 bg-third rounded-full blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-0 lg:right-0 w-24 h-24 md:w-80 md:h-80 lg:w-80 lg:h-80 right-10 bg-third rounded-full blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
 
         <div className="relative self-center mx-auto -top-10 lg:top-0 md:top-0">
           <h1 className=" text-center lg:text-7xl md:text-7xl text-[45px]">
