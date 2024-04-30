@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const [inputVal, setInputVal] = useState("");
@@ -51,13 +52,13 @@ export default function Home() {
           </p>
           <div className="flex justify-center text-center text-[9px] md:text-xs lg:text-[12px] pt-5 text-gray-300">
             <p>created by . </p>
-          <a href="https://www.instagram.com/krisnabmntr__/" className="hover:underline">
-            Krisna Bimantoro
-          </a>
+            <a href="https://www.instagram.com/krisnabmntr__/" className="hover:underline">
+              Krisna Bimantoro
+            </a>
           </div>
-          
         </div>
       </div>
+      <Analytics></Analytics>
     </div>
   );
 }
