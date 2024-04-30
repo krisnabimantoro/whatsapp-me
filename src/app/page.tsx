@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Analytics } from "@vercel/analytics/react";
-import { useNavigate } from "react-router-dom";
+
 
 export default function Home() {
   const [inputVal, setInputVal] = useState("");
@@ -13,11 +13,8 @@ export default function Home() {
     event.preventDefault();
     router.push(`http://wa.me/62${inputVal}`);
   };
-  const navigate = useNavigate();
 
-  const gotToNewPage = () => {
-    navigate(`http://wa.me/62${inputVal}`);
-  };
+  
 
   return (
     <div className="container">
@@ -35,7 +32,7 @@ export default function Home() {
           <form
             action=""
             className="mt-9 mx-auto max-w-max bg-white rounded-xl rounded-tr-2xl rounded-br-2xl flex "
-            onSubmit={gotToNewPage}
+            onSubmit={handleSubmit}
           >
             <Image src="/indonesia (3).png" width={40} height={20} className="ml-4" alt="Picture of the author" />
             <span className="text-gray-600 text-base ml-2 self-center">+62</span>
